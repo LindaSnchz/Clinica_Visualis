@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    --primario: #33d9b2;
+    --secundario: #218c74;
+    --hover: #26de81;
+    --negro: #333;
+    --blanco: #fff;
+    --lightcolor: #666;
+    --fondoclaro: #eee;
+    --borde: .2rem solid rgba(0,0,0,.1);
+    --sombra: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--primario);
+    border-radius: 5rem;
+}
+
+.section{
+    padding: 5rem 7%; 
+}
+.titulo{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--negro);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+}
+
+.header .logo img{
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+}
+.header .logo{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--negro);
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.header #navbar a{
+    font-size: 1.5rem;
+    color: var(--negro);
+    margin: 0 1rem;
+}
+.header #navbar a:hover/* , .header #navbar .active */{
+    color: var(--hover);
+}
+
+.btn{
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    border-radius: .5rem;
+    background: var(--primario);
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.btn:hover{
+    background: var(--secundario);
+}
+
+.inicio{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../img/inicio2.jpg) no-repeat;
+    background-size:cover;
+    background-position: center; 
+}
+
+.inicio .content{
+    max-width: 60rem;
+    padding-left: 6rem;
+    padding-top: 10rem;
+}
+
+.inicio .content h3{
+    font-size: 6rem;
+    color:var(--negro);
+    line-height: 1.2;
+    text-transform: none;
+}
+
+.inicio .content p{
+    line-height: 2;
+    font-size: 1.5rem;
+    color: var(--lightcolor);
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+.about .filas{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;   
+}
+.about .filas .imagen{
+    flex: 1 1 40rem;
+}
+.about .filas .imagen img{
+    width: 90%;
+    height: 90%;
+    border-radius: 5%;
+    margin-left: 2rem;
+}
+
+.about .filas .content{
+    flex: 1 1 40rem;
+}
+.about .filas .content h3{
+    color: var(--negro);
+    font-size: 3rem;
+    text-transform: none;
+    line-height: 1.5;
+}
+.about .filas .content p{
+    font-size: 1.2rem;
+    color: var(--lightcolor);
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+.servicios{
+    background: var(--fondoclaro);
+}
+
+.servicios .box-contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: .8rem;
+}
+
+.servicios .box-contenedor .box{
+    padding: 1rem;
+    text-align: center;
+}
+
+.servicios .box-contenedor .box .img1{
+    padding-left: 2rem;
+}
+.servicios .box-contenedor .box .img2{
+    padding-right: 2rem;
+}
+.servicios .box-contenedor .box h3{
+    color: var(--negro);
+    font-size: 2.5rem;
+    line-height: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-transform: none;
+}
+.servicios .box-contenedor .box li{
+    color: var(--lightcolor);
+    font-size: 1.7rem;
+    list-style: none;
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.noticias .box-contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+.noticias .box-contenedor .box{
+    border: var(--borde);
+}
+.noticias .box-contenedor .box .imagenes{
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+.noticias .box-contenedor .box .imagenes img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.noticias .box-contenedor .box:hover .imagenes img{
+    transform: scale(1.1);
+}
+.noticias .box-contenedor .box .contenido{
+    padding: 2rem 1.5rem;
+}
+.noticias .box-contenedor .box .contenido .fecha{
+    padding-bottom: 1.7rem;
+    display: flex;
+    align-items: center;
+}
+.noticias .box-contenedor .box .contenido .fecha a{
+    font-size: 1.2rem;
+    color: var(--lightcolor);
+}
+.noticias .box-contenedor .box .contenido h3{
+    font-size: 2.2rem;
+    color:var(--negro);
+    text-transform: none;
+}
+.noticias .box-contenedor .box .contenido p{
+    font-size: 1.4rem;
+    color:var(--lightcolor);
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+.contacto{
+    background: var(--fondoclaro);
+}
+.contacto form, .formulario form{
+    padding: 2rem;
+    background: var(--blanco);
+    max-width: 50rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+.contacto form span, .formulario form span{
+    font-size: 1.5rem;
+    color: var(--secundario);
+    font-weight: bolder;
+    text-transform: none;
+}
+.contacto form .inputbox, .formulario form .inputbox{
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacto form .inputbox input, .formulario form .inputbox input{
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size:  1.5rem;
+    color: var(--negro);
+    background: var(--fondoclaro);
+    border-radius: .5rem;
+    width: 49%
+}
+
+.contacto form .box, .formulario form .box{
+    margin: 1rem 0;
+    width: 100%;
+    background: var(--fondoclaro);
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--negro);
+}
+
+.contacto form .inputmensaje{
+    resize: none;
+    display: flex;
+    padding: 1.8rem 1rem;
+    margin-bottom: .5rem;
+    width: 100%;
+    background: var(--fondoclaro);
+}
+.superior .content h3{
+    padding-top: 10rem;
+    color: var(--negro);
+    font-size: 3rem;
+    text-transform: none;
+    line-height: 1.5;
+    text-align: center;
+}
+.superior .content p{
+    text-transform: none;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+}

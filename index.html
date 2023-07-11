@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Oftalmológica Visualis</title>
+    <link href="assets/img/eye.ico" rel="icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+            <a href="#inicio" class = "logo"> <img src="assets/img/eye.ico" alt="logo"> Clínica Oftalmológica Visualis </a>
+            <nav id="navbar">
+                <a href="#inicio">INICIO</a>
+                <a href="#about">NOSOTROS</a>
+                <a href="#servicios">SERVICIOS</a>
+                <a href="#noticias">NOTICIAS</a>
+                <a href="#contacto">CONTACTO</a>     
+            </nav>
+            <a href="turnos.html" class="btn"> PEDIR TURNO</a>
+    </header>
+
+    <main>
+        <section class="inicio" id="inicio">
+                <div class="content">
+                    <h3>Bienvenido a Visualis</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis repellendus similique animi laborum! Accusamus alias est aliquid tempore illo nisi quasi dignissimos. Non nobis animi iusto sapiente. Ad, quaerat reiciendis?</p>
+                    <a href="turnos.html" class="btn"> PEDIR TURNO</a>
+                </div>
+        </section>
+
+        <section class="about" id="about">
+            <h1 class="titulo">Sobre nosotros</h1>
+            <div class="filas">
+                <div class="imagen">
+                    <img src="assets/img/aboutus.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Tu salud es nuestro compromiso</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic et totam voluptas. Eligendi ea harum, totam ipsam quae nihil eius deserunt est nesciunt tenetur facere ducimus accusantium adipisci architecto minus.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eaque harum unde tempore, nihil animi voluptatum ipsa modi culpa? Adipisci sunt expedita necessitatibus esse dolor ut consequuntur facere totam tempora?</p>
+
+                    <a href="" class="btn">Mas informacion</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicios" id="servicios">
+            <h1 class="titulo">Nuestros servicios</h1>
+            <div class="box-contenedor">
+                <div class="box">
+                    <img src="assets/img/estudio.jpg" class="img1" alt="">
+                    <h3>Estudios de Oftamologia</h3>
+                    <li>Angio O.C.T.</li>
+                    <li>Campimetría Computarizada</li>
+                    <li>Ecografia modo A y B</li>
+                    <li>Topografía Corneal</li>
+                    <li>IOL Master</li>
+                    <li>Recetas de Lentes por Computación</li>
+                </div>
+
+                <div class="box">
+                    <img src="assets/img/cirugias.jpg" class="img2" alt="">
+                    <h3>Procedimientos Quirurgicos</h3>
+                    <li>Cirugía de Cataratas</li>
+                    <li>Cirugía de Estrabismo</li>
+                    <li>Excimer Láser - Lasik y PRK</li>
+                    <li>Láser de Argón</li>
+                    <li>Cirugía para el Desprendimiento de Retina</li>
+                    <li>Cirugías Pediatricas</li>
+                </div>
+            </div>
+        </section>
+
+        <section class="noticias" id="noticias">
+            <h1 class="titulo">Noticias</h1>
+            <div class="box-contenedor">
+                <div class="box">
+                    <div class="imagenes">
+                        <img src="assets/img/noticia1.jpg" alt="">
+                    </div>
+                    <div class="contenido">
+                        <div class="fecha">
+                            <a href="">Lunes, 13 MARZO 2023</a>
+                        </div>
+                        <h3>Cobertura</h3>
+                        <p>Estas son algunas de las obras sociales y prepagas que trabajan con nosotros.</p>
+                        <a href="" class="btn">Mas informacion</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imagenes">
+                        <img src="assets/img/noticia2.png" alt="">
+                    </div>
+                    <div class="contenido">
+                        <div class="fecha">
+                            <a href="">Viernes, 16 JUNIO 2023</a>
+                        </div>
+                        <h3>El control de la Retinopatía Diabética</h3>
+                        <p>Es una patología ocular causada por altos niveles de azucar en la sangre, que presenta una prevalencia en aumento en todo el mundo.</p>
+                        <a href="" class="btn">Mas informacion</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imagenes">
+                        <img src="assets/img/noticia3.png" alt="">
+                    </div>
+                    <div class="contenido">
+                        <div class="fecha">
+                            <a href="">Lunes, 3 JULIO 2023</a>
+                        </div>
+                        <h3>Adicion de Obras Sociales</h3>
+                        <p>El Sindrome de Ojo Seco es un motivo de consulta muy frecuente.</p>
+                        <a href="" class="btn">Mas informacion</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h1 class="titulo">Consultas? Contactanos!</h1>
+
+            <form action="">
+                <span>Tu nombre completo:</span>
+                <div class="inputbox">
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Apellido">
+                </div>
+
+                <span>Tu correo electronico:</span>
+                <input type="email" placeholder="Email" class="box">
+
+                <span>Tu numero telefonico: </span>
+                <input type="number" placeholder="Numero telefonico" class="box">
+
+                <span>Mensaje: </span>
+                <textarea class="inputmensaje" placeholder="Mensaje"></textarea>
+
+                <input type="submit" value="Enviar" class="btn">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
