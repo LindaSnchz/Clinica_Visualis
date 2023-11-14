@@ -1,0 +1,17 @@
+.contenido p{
+    margin: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 2;
+    font-size: 1.3rem;
+    color: var(--negro);
+    /* padding: 1rem 0; */
+}
+.contenido .btn {
+    display: inline-block;
+    margin-top: 10px; 
+    margin-bottom: 30px;
+}
+.contenido .botones-container {
+    text-align: center; /* Centra los elementos en línea horizontalmente */
+}

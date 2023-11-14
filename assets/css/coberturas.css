@@ -1,0 +1,38 @@
+@import "style.css";
+
+.subtitulo{
+    font-size: 2.5rem;
+    color: var(--negro);
+    padding-top: 10rem;
+    margin: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: none;
+}
+.texto{
+    margin-left:2rem;
+    font-size: 1.3rem;
+    text-transform: none;
+    margin-bottom: 2rem;
+    color: var(--negro);
+}
+.coberturas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cobertura {
+    width: calc(33.33% - 2rem);
+    border: 1px solid #ddd;
+    box-shadow: var(--sombra);
+    padding: 1rem;
+    margin-bottom: 2rem; 
+    text-align: center;
+    background: var(--blanco);
+}
+
+.cobertura .contenido img {
+    max-width: 100%;
+    height: auto;
+}
