@@ -19,12 +19,16 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: .2s linear;
     text-decoration: none;
 }
-
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 html{
+    height: 100%;
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
@@ -55,6 +59,8 @@ html::-webkit-scrollbar-thumb{
     margin-top: 2rem;
     padding-top: 2rem;
 }
+
+/* header */
 
 .header{
     position: fixed;
@@ -90,9 +96,11 @@ img{
     color: var(--negro);
     margin: 0 1rem;
 }
-.header #navbar a:hover/* , .header #navbar .active */{
+.header #navbar a:hover{
     color: var(--hover);
 }
+
+/* fin header */
 
 .btn{
     display: inline-block;
@@ -110,6 +118,8 @@ img{
 .btn:hover{
     background: var(--secundario);
 }
+
+/* inicio */
 
 .inicio{
     min-height: 100vh;
@@ -134,12 +144,16 @@ img{
 }
 
 .inicio .content p{
+    text-align: justify;
     line-height: 2;
     font-size: 1.5rem;
     color: var(--lightcolor);
     padding: 1rem 0;
     text-transform: none;
 }
+/* fin inicio */
+
+/* inicio-nosotros */
 
 .about .filas{
     display: flex;
@@ -147,17 +161,17 @@ img{
     flex-wrap: wrap;
     gap:2rem;   
 }
-.about .filas .imagen{
+.about .filas .imagen, .nosotros .contenido .imagen{
     flex: 1 1 40rem;
 }
-.about .filas .imagen img{
+.about .filas .imagen img, .nosotros .contenido .imagen img{
     width: 90%;
     height: 90%;
     border-radius: 5%;
     margin-left: 2rem;
 }
 
-.about .filas .content{
+.about .filas .content, .nosotros .contenido .content{
     flex: 1 1 40rem;
 }
 .about .filas .content h3{
@@ -166,12 +180,17 @@ img{
     text-transform: none;
     line-height: 1.5;
 }
-.about .filas .content p{
-    font-size: 1.2rem;
+.about .filas .content p, .nosotros .contenido .content p{
+    font-size: 1.3rem;
     color: var(--lightcolor);
-    padding: 1rem 0;
+    padding: 1rem;
     text-transform: none;
+    text-align: justify;
 }
+
+/* fin inicio-nosotros */
+
+/* inicio-servicios */
 
 .servicios{
     background: var(--fondoclaro);
@@ -204,11 +223,22 @@ img{
 }
 .servicios .box-contenedor .box li{
     color: var(--lightcolor);
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     list-style: none;
     line-height: 1.5;
+}
+.servicios .box-contenedor .box li a{
+    color: var(--negro);
     text-transform: none;
 }
+
+.servicios .box-contenedor .box li a:hover{
+    color: var(--hover);
+}
+
+/* fin inicio-servicios */
+
+/* inicio-noticias */
 
 .noticias .box-contenedor{
     display: grid;
@@ -254,40 +284,45 @@ img{
     padding: 1rem 0;
     text-transform: none;
 }
+/* fin inicio-noticias */
 
+/* inicio-contacto y formulario-turnos*/
 .contacto{
     background: var(--fondoclaro);
+    padding-bottom: 2rem;
 }
-.contacto form, .formulario form{
+.contacto form{
     padding: 2rem;
     background: var(--blanco);
     max-width: 50rem;
     margin: 0 auto;
     border-radius: 1rem;
+    margin-bottom: 2rem;
 }
-.contacto form span, .formulario form span{
+.contacto form span{
     font-size: 1.5rem;
     color: var(--secundario);
     font-weight: bolder;
     text-transform: none;
 }
-.contacto form .inputbox, .formulario form .inputbox{
+.contacto form .inputbox{
     display:  flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.contacto form .inputbox input, .formulario form .inputbox input{
+.contacto form .inputbox input{
     padding: 1rem;
     margin: 1rem 0;
     font-size:  1.5rem;
     color: var(--negro);
     background: var(--fondoclaro);
     border-radius: .5rem;
-    width: 49%
+    width: 49%;
+    text-transform: none;
 }
 
-.contacto form .box, .formulario form .box{
+.contacto form .box{
     margin: 1rem 0;
     width: 100%;
     background: var(--fondoclaro);
@@ -295,6 +330,7 @@ img{
     padding: 1rem;
     font-size: 1.5rem;
     color: var(--negro);
+    text-transform: none;
 }
 
 .contacto form .inputmensaje{
@@ -304,7 +340,12 @@ img{
     margin-bottom: .5rem;
     width: 100%;
     background: var(--fondoclaro);
+    text-transform: none;
 }
+/* fin inicio-contacto y algo de turnos */
+
+/* turnos */
+
 .superior .content h3{
     padding-top: 10rem;
     color: var(--negro);
@@ -316,6 +357,99 @@ img{
 .superior .content p{
     text-transform: none;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 2rem;
+    line-height: 1.5;
 }
+/* fin turnos */
+
+/* nosotros completo */
+
+.nosotros .titulo{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--negro);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-top: 8rem;
+}
+.nosotros .contenido/* , .info .contenido */{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;  
+    margin-bottom: 2rem;
+}
+
+.nosotros .contenido .content p/* , .info .contenido p */{
+    color: var(--negro);
+}
+/* fin nosotros completo */
+
+/* footer */
+
+footer{
+    margin-top: auto;
+}
+.footer{
+    margin-top: auto;
+    text-align: center;
+    background: var(--primario);
+    color: var(--negro);
+    bottom: 0;
+    
+}
+.footer .box-contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    width: 100%;
+    height: 5rem;
+}
+.rrss{
+    display: flex;
+    justify-content: center;
+}
+.rrss a{
+    text-decoration: none;
+    padding: 1rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
+.rrss a i{
+    font-size: 1.8rem;
+    color: var(--negro);
+}
+.footer .box-contenedor .box h3{
+    font-size: 1.5rem;
+}
+.footer .box-contenedor .box p{
+    font-size: 1.5rem;
+    padding: .5rem;
+    line-height: 1;
+    color: var(--negro);
+}
+.footer .box-contenedor .box .email{
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--negro);
+    text-transform: none;
+}
+.footer .copyright{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--negro);
+    border-top: .1rem solid var(--negro);
+    
+}
+.footer .copyright span{
+    color: var(--blanco);
+    font-weight: bolder;
+}
+/* fin footer */
+
+
